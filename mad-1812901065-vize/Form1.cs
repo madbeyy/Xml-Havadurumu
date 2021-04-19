@@ -27,6 +27,7 @@ namespace mad_1812901065_vize
             mad1.Load(hava_durumu_link);
             XmlElement dem1 = mad1.DocumentElement;
             XmlNodeList alı = dem1.SelectNodes("sehirler");
+            XmlNodeList alı2 = dem1.SelectNodes("Kemo");
 
             foreach (XmlNode item in alı)
             {
@@ -43,6 +44,23 @@ namespace mad_1812901065_vize
                 row.Cells[1].Value = Durum;
                 row.Cells[2].Value = Maks_sicaklik;
                 dataGridView1.Rows.Add(row);
+
+
+
+            }
+
+            foreach (XmlNode item2 in alı2)
+            {
+
+                string tarih = item2["PeryotBaslama"].InnerText;
+               
+                DataGridViewRow row2 = (DataGridViewRow)dataGridView2.Rows[0].Clone();
+
+                row2.Cells[0].Value = tarih;
+
+                dataGridView2.Rows.Add(row2);
+
+
 
 
 
