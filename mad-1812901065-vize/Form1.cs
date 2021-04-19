@@ -120,5 +120,16 @@ namespace mad_1812901065_vize
         {
             MessageBox.Show("Belirli aralıklarla veriler masaüstüne kaydedilecektir.  ", "Veri Kaydetme İşlemi");
         }
+
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            var zaman = DateTime.Now.ToLongTimeString();
+
+
+            if (zaman.CompareTo("18:00:00") == 0)
+            {
+                MessageBox.Show("Hava Durumu Güncellenmiştir.", "Mehmet Ali Demir Ödev");
+            }
+        }
     }
 }

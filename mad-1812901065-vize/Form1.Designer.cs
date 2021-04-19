@@ -32,14 +32,15 @@ namespace mad_1812901065_vize
             this.components = new System.ComponentModel.Container();
             this.Hava1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -68,18 +69,6 @@ namespace mad_1812901065_vize
             this.dataGridView1.Size = new System.Drawing.Size(988, 398);
             this.dataGridView1.TabIndex = 1;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column4});
-            this.dataGridView2.Location = new System.Drawing.Point(470, 24);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(564, 150);
-            this.dataGridView2.TabIndex = 2;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Şehirler";
@@ -100,6 +89,18 @@ namespace mad_1812901065_vize
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 125;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4});
+            this.dataGridView2.Location = new System.Drawing.Point(470, 24);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(564, 150);
+            this.dataGridView2.TabIndex = 2;
             // 
             // Column4
             // 
@@ -125,6 +126,12 @@ namespace mad_1812901065_vize
             this.timer3.Enabled = true;
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // timer4
+            // 
+            this.timer4.Enabled = true;
+            this.timer4.Interval = 1000;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // Form1
             // 
@@ -156,6 +163,7 @@ namespace mad_1812901065_vize
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Timer timer4;
     }
 }
 
