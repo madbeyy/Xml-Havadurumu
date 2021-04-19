@@ -94,5 +94,26 @@ namespace mad_1812901065_vize
 
 
         }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            XmlDocument mad2 = new XmlDocument();
+            mad2.Load(hava_durumu_link);
+            mad2.Save(@"C:\Users\Demir\Desktop\DetaylıHavaDurumuGüncel.txt");
+
+            MessageBox.Show("Güncel Detaylı Hava Durumu Verileri Kaydedilmiştir.", "Mehmet Ali Demir Ödev");
+
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            var zaman = DateTime.Now.ToLongTimeString();
+
+
+            if (zaman.CompareTo("06:00:00") == 0)
+            {
+                MessageBox.Show("Hava Durumu Güncellenmiştir.", "Mehmet Ali Demir Ödev");
+            }
+        }
     }
 }
