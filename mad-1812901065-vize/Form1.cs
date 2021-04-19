@@ -70,5 +70,29 @@ namespace mad_1812901065_vize
 
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            XmlDocument mad2 = new XmlDocument();
+            mad2.Load(hava_durumu_link);
+            XmlElement dem2 = mad2.DocumentElement;
+            XmlNodeList alı3 = dem2.SelectNodes("Kemo");
+
+            foreach (XmlNode item3 in alı3)
+            {
+
+                string tarih2 = item3["PeryotBaslama"].InnerText;
+
+                DataGridViewRow row3 = (DataGridViewRow)dataGridView2.Rows[0].Clone();
+
+                row3.Cells[0].Value = tarih2;
+
+                dataGridView2.Rows.Add(row3);
+
+            }
+
+
+        }
     }
 }
