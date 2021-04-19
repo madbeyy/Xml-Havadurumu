@@ -115,5 +115,10 @@ namespace mad_1812901065_vize
                 MessageBox.Show("Hava Durumu Güncellenmiştir.", "Mehmet Ali Demir Ödev");
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Belirli aralıklarla veriler masaüstüne kaydedilecektir.  ", "Veri Kaydetme İşlemi");
+        }
     }
 }
