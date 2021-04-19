@@ -28,6 +28,26 @@ namespace mad_1812901065_vize
             XmlElement dem1 = mad1.DocumentElement;
             XmlNodeList alı = dem1.SelectNodes("sehirler");
 
+            foreach (XmlNode item in alı)
+            {
+
+                string sehir = item["ili"].InnerText;
+                string Durum = item["Durum"].InnerText;
+                string Maks_sicaklik = item["Mak"].InnerText;
+
+
+                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+
+
+                row.Cells[0].Value = sehir;
+                row.Cells[1].Value = Durum;
+                row.Cells[2].Value = Maks_sicaklik;
+                dataGridView1.Rows.Add(row);
+
+
+
+            }
+
 
 
 
